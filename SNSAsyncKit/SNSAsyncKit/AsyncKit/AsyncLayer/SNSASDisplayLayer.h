@@ -14,7 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @class SNSASDisplayNode;
 
-@protocol SNSDisplayLayerDelegate;
+@protocol SNSASDisplayLayerDelegate;
 
 @interface SNSASDisplayLayer : CALayer
 
@@ -44,11 +44,13 @@ NS_ASSUME_NONNULL_BEGIN
  
  @desc The asyncDelegate will have the opportunity to override the methods related to async display.
  */
-@property (nullable, weak) id<SNSDisplayLayerDelegate> asyncDelegate;
+@property (nullable, weak) id<SNSASDisplayLayerDelegate> asyncDelegate;
+
++ (dispatch_queue_t)displayQueue;
 
 @end
 
-@protocol SNSDisplayLayerDelegate <NSObject>
+@protocol SNSASDisplayLayerDelegate <NSObject>
 
 @optional
 

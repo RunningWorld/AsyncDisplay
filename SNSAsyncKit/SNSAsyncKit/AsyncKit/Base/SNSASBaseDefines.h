@@ -47,3 +47,8 @@
 #define AS_NOESCAPE
 #endif
 
+#if __has_attribute(objc_subclassing_restricted)
+#define AS_SUBCLASSING_RESTRICTED __attribute__((objc_subclassing_restricted))
+#else
+#define AS_SUBCLASSING_RESTRICTED
+#endif

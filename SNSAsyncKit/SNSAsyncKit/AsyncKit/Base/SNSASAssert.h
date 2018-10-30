@@ -22,3 +22,4 @@ AS_EXTERN BOOL ASMainThreadAssertionsAreDisabled(void);
 #define ASDisplayNodeCAssertTrue(condition) ASDisplayNodeCAssert((condition), @"Expected %s to be true.", #condition)
 
 #define ASDisplayNodeAssertMainThread() ASDisplayNodeAssert(ASMainThreadAssertionsAreDisabled() || 0 != pthread_main_np(), @"This method must be called on the main thread")
+#define ASDisplayNodeCAssertMainThread() ASDisplayNodeCAssert(ASMainThreadAssertionsAreDisabled() || 0 != pthread_main_np(), @"This function must be called on the main thread")

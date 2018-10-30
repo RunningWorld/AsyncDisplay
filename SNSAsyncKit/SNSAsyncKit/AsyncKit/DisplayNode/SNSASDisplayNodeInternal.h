@@ -10,6 +10,8 @@
 #import "SNSASThread.h"
 #import "SNSASTransactionContext.h"
 
+@class SNSASDisplayLayer;
+
 #define VISIBILITY_NOTIFICATIONS_DISABLED_BITS 4
 
 @interface SNSASDisplayNode () <SNSASTransitionContextCompletionDelegate>
@@ -57,6 +59,31 @@
 @protected
     SNSASDisplayNode * __weak _supernode;
     NSMutableArray<SNSASDisplayNode *> *_subnodes;
+    std::atomic_uint _displaySentinel;
+    // Set this to nil whenever you modify _subnodes
+    NSArray<SNSASDisplayNode *> *_cachedSubnodes;
+    // This is the desired contentsScale, not the scale at which the layer's contents should be displayed
+    CGFloat _contentsScaleForDisplay;
+    CGFloat _cornerRadius;
+    ASCornerRoundingType _cornerRoundingType;
+    ASDisplayNodeContextModifier _willDisplayNodeContentWithRenderingContext;
+    ASDisplayNodeContextModifier _didDisplayNodeContentWithRenderingContext;
 }
+
+/// The _ASDisplayLayer backing the node, if any.
+@property (nullable, nonatomic, readonly) SNSASDisplayLayer *asyncLayer;
+
+/**
+ * Whether this node rasterizes its descendants. See -enableSubtreeRasterization.
+ */
+@property (readonly) BOOL rasterizesSubtree;
+
+/**
+ * Called whenever the node needs to layout its subnodes and, if it's already loaded, its subviews. Executes the layout pass for the node
+ *
+ * This method is thread-safe but asserts thread affinity.
+ */
+- (void)__layout;
+
 
 @end

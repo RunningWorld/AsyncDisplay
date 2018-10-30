@@ -9,6 +9,8 @@
 #import "SNSASDisplayLayer.h"
 #import "SNSASAssert.h"
 #import "SNSASDisplayNode.h"
+#import "SNSASDisplayNode+FrameworkPrivate.h"
+#import "SNSASDisplayNodeInternal.h"
 
 @implementation SNSASDisplayLayer
 {
@@ -94,6 +96,12 @@
     [self display:self.displaysAsynchronously];
 }
 
+- (void)displayImmediately
+{
+    ASDisplayNodeAssertMainThread();
+    [self display:NO];
+}
+
 - (void)display:(BOOL)asynchronously
 {
     if (CGRectIsEmpty(self.bounds)) {
@@ -113,7 +121,6 @@
 - (void)cancelAsyncDisplay
 {
     ASDisplayNodeAssertMainThread();
-    
     [self.asyncDelegate cancelDisplayAsyncLayer:self];
 }
 

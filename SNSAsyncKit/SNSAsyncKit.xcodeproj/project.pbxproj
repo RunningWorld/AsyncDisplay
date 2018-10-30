@@ -11,6 +11,11 @@
 		D48B959721749D83005F22BA /* SNSASDisplayNode+AsyncDisplay.mm in Sources */ = {isa = PBXBuildFile; fileRef = D48B959521749D83005F22BA /* SNSASDisplayNode+AsyncDisplay.mm */; };
 		D48B959A21749DE3005F22BA /* SNSASDisplayLayer.mm in Sources */ = {isa = PBXBuildFile; fileRef = D48B959921749DE3005F22BA /* SNSASDisplayLayer.mm */; };
 		D48B959F2174A3E8005F22BA /* SNSASAssert.m in Sources */ = {isa = PBXBuildFile; fileRef = D48B959E2174A3E8005F22BA /* SNSASAssert.m */; };
+		D48B95EC21870251005F22BA /* SNSASGraphicsContext.m in Sources */ = {isa = PBXBuildFile; fileRef = D48B95EB21870251005F22BA /* SNSASGraphicsContext.m */; };
+		D48B95FE218821C2005F22BA /* SNSASAysncTransactionContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = D48B95F5218821C2005F22BA /* SNSASAysncTransactionContainer.m */; };
+		D48B95FF218821C2005F22BA /* SNSASTransactionContext.m in Sources */ = {isa = PBXBuildFile; fileRef = D48B95F6218821C2005F22BA /* SNSASTransactionContext.m */; };
+		D48B9600218821C2005F22BA /* SNSASTransaction.mm in Sources */ = {isa = PBXBuildFile; fileRef = D48B95F9218821C2005F22BA /* SNSASTransaction.mm */; };
+		D48B9601218821C2005F22BA /* SNSASTransactionGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = D48B95FD218821C2005F22BA /* SNSASTransactionGroup.m */; };
 		D4900B052170A2C700EDF27A /* SNSASDisplayNode.mm in Sources */ = {isa = PBXBuildFile; fileRef = D4900B022170A2C700EDF27A /* SNSASDisplayNode.mm */; };
 		D4A785FE21649B85008263B7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D4A785FD21649B85008263B7 /* AppDelegate.m */; };
 		D4A7860121649B85008263B7 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4A7860021649B85008263B7 /* ViewController.m */; };
@@ -20,9 +25,7 @@
 		D4A7860C21649B87008263B7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D4A7860B21649B87008263B7 /* main.m */; };
 		D4A7861621649B87008263B7 /* SNSAsyncKitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D4A7861521649B87008263B7 /* SNSAsyncKitTests.m */; };
 		D4A7862121649B87008263B7 /* SNSAsyncKitUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = D4A7862021649B87008263B7 /* SNSAsyncKitUITests.m */; };
-		D4A78648216753A5008263B7 /* SNSASTransaction.m in Sources */ = {isa = PBXBuildFile; fileRef = D4A78647216753A5008263B7 /* SNSASTransaction.m */; };
 		D4A78664216F718E008263B7 /* SNSASInternalHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = D4A78663216F718E008263B7 /* SNSASInternalHelpers.m */; };
-		D4C00AE1217089F20077E58A /* SNSASTransactionContext.m in Sources */ = {isa = PBXBuildFile; fileRef = D4C00AE0217089F20077E58A /* SNSASTransactionContext.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,12 +49,24 @@
 		D48B95842170AA67005F22BA /* SNSASDisplayNodeInternal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SNSASDisplayNodeInternal.h; sourceTree = "<group>"; };
 		D48B9593217495B3005F22BA /* SNSASDisplayNode+UIViewBridge.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = "SNSASDisplayNode+UIViewBridge.mm"; sourceTree = "<group>"; };
 		D48B959521749D83005F22BA /* SNSASDisplayNode+AsyncDisplay.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = "SNSASDisplayNode+AsyncDisplay.mm"; sourceTree = "<group>"; };
-		D48B959621749D83005F22BA /* SNSASDisplayNode+AsyncDisplay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SNSASDisplayNode+AsyncDisplay.h"; sourceTree = "<group>"; };
 		D48B959821749DE3005F22BA /* SNSASDisplayLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SNSASDisplayLayer.h; sourceTree = "<group>"; };
 		D48B959921749DE3005F22BA /* SNSASDisplayLayer.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = SNSASDisplayLayer.mm; sourceTree = "<group>"; };
 		D48B959C2174A1F0005F22BA /* SNSAsyncKit-prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SNSAsyncKit-prefix.pch"; sourceTree = "<group>"; };
 		D48B959D2174A3E8005F22BA /* SNSASAssert.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SNSASAssert.h; sourceTree = "<group>"; };
 		D48B959E2174A3E8005F22BA /* SNSASAssert.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SNSASAssert.m; sourceTree = "<group>"; };
+		D48B95E42186EABC005F22BA /* SNSASDisplayNode+FrameworkPrivate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SNSASDisplayNode+FrameworkPrivate.h"; sourceTree = "<group>"; };
+		D48B95E52186EDB9005F22BA /* SNSASObjectDescriptionHelpers.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SNSASObjectDescriptionHelpers.h; sourceTree = "<group>"; };
+		D48B95EA21870251005F22BA /* SNSASGraphicsContext.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SNSASGraphicsContext.h; sourceTree = "<group>"; };
+		D48B95EB21870251005F22BA /* SNSASGraphicsContext.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SNSASGraphicsContext.m; sourceTree = "<group>"; };
+		D48B95F5218821C2005F22BA /* SNSASAysncTransactionContainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SNSASAysncTransactionContainer.m; sourceTree = "<group>"; };
+		D48B95F6218821C2005F22BA /* SNSASTransactionContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SNSASTransactionContext.m; sourceTree = "<group>"; };
+		D48B95F7218821C2005F22BA /* SNSASTransactionGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SNSASTransactionGroup.h; sourceTree = "<group>"; };
+		D48B95F8218821C2005F22BA /* SNSASAsyncTransactionContainer+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SNSASAsyncTransactionContainer+Private.h"; sourceTree = "<group>"; };
+		D48B95F9218821C2005F22BA /* SNSASTransaction.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = SNSASTransaction.mm; sourceTree = "<group>"; };
+		D48B95FA218821C2005F22BA /* SNSASAysncTransactionContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SNSASAysncTransactionContainer.h; sourceTree = "<group>"; };
+		D48B95FB218821C2005F22BA /* SNSASTransactionContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SNSASTransactionContext.h; sourceTree = "<group>"; };
+		D48B95FC218821C2005F22BA /* SNSASTransaction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SNSASTransaction.h; sourceTree = "<group>"; };
+		D48B95FD218821C2005F22BA /* SNSASTransactionGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SNSASTransactionGroup.m; sourceTree = "<group>"; };
 		D4900B012170A2C700EDF27A /* SNSASDisplayNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SNSASDisplayNode.h; sourceTree = "<group>"; };
 		D4900B022170A2C700EDF27A /* SNSASDisplayNode.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = SNSASDisplayNode.mm; sourceTree = "<group>"; };
 		D4A785F921649B85008263B7 /* SNSAsyncKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SNSAsyncKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -72,15 +87,11 @@
 		D4A7862221649B87008263B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D4A7864021671327008263B7 /* SNSASThread.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SNSASThread.h; sourceTree = "<group>"; };
 		D4A7864421671399008263B7 /* SNSASBaseDefines.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SNSASBaseDefines.h; sourceTree = "<group>"; };
-		D4A78646216753A5008263B7 /* SNSASTransaction.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SNSASTransaction.h; sourceTree = "<group>"; };
-		D4A78647216753A5008263B7 /* SNSASTransaction.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SNSASTransaction.m; sourceTree = "<group>"; };
 		D4A7865C216F51CB008263B7 /* SNSASEqualityHelpers.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SNSASEqualityHelpers.h; sourceTree = "<group>"; };
 		D4A78662216F718E008263B7 /* SNSASInternalHelpers.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SNSASInternalHelpers.h; sourceTree = "<group>"; };
 		D4A78663216F718E008263B7 /* SNSASInternalHelpers.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SNSASInternalHelpers.m; sourceTree = "<group>"; };
 		D4C00ADD2170844F0077E58A /* SNSASLocking.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SNSASLocking.h; sourceTree = "<group>"; };
 		D4C00ADE2170854C0077E58A /* SNSASBlockTypes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SNSASBlockTypes.h; sourceTree = "<group>"; };
-		D4C00ADF217089F20077E58A /* SNSASTransactionContext.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SNSASTransactionContext.h; sourceTree = "<group>"; };
-		D4C00AE0217089F20077E58A /* SNSASTransactionContext.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SNSASTransactionContext.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +127,32 @@
 			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		D48B95E92187021F005F22BA /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				D48B95EA21870251005F22BA /* SNSASGraphicsContext.h */,
+				D48B95EB21870251005F22BA /* SNSASGraphicsContext.m */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		D48B95F4218821C2005F22BA /* Transition */ = {
+			isa = PBXGroup;
+			children = (
+				D48B95F8218821C2005F22BA /* SNSASAsyncTransactionContainer+Private.h */,
+				D48B95FA218821C2005F22BA /* SNSASAysncTransactionContainer.h */,
+				D48B95F5218821C2005F22BA /* SNSASAysncTransactionContainer.m */,
+				D48B95F7218821C2005F22BA /* SNSASTransactionGroup.h */,
+				D48B95FD218821C2005F22BA /* SNSASTransactionGroup.m */,
+				D48B95FB218821C2005F22BA /* SNSASTransactionContext.h */,
+				D48B95F6218821C2005F22BA /* SNSASTransactionContext.m */,
+				D48B95FC218821C2005F22BA /* SNSASTransaction.h */,
+				D48B95F9218821C2005F22BA /* SNSASTransaction.mm */,
+			);
+			name = Transition;
+			path = AsyncKit/Transition;
+			sourceTree = "<group>";
+		};
 		D4A785F021649B85008263B7 = {
 			isa = PBXGroup;
 			children = (
@@ -139,6 +176,7 @@
 		D4A785FB21649B85008263B7 /* SNSAsyncKit */ = {
 			isa = PBXGroup;
 			children = (
+				D48B95F4218821C2005F22BA /* Transition */,
 				D48B959B2174A1DA005F22BA /* Supporting Files */,
 				D4A786322167043D008263B7 /* AsyncKit */,
 				D4A785FC21649B85008263B7 /* AppDelegate.h */,
@@ -175,10 +213,10 @@
 		D4A786322167043D008263B7 /* AsyncKit */ = {
 			isa = PBXGroup;
 			children = (
+				D48B95E92187021F005F22BA /* Detail */,
 				D4C00ADC2170841B0077E58A /* Core */,
 				D4A7865E216F6829008263B7 /* Private */,
 				D4A786432167136F008263B7 /* Base */,
-				D4A786332167043D008263B7 /* Transition */,
 				D4A786342167043D008263B7 /* Runloop */,
 				D4A786352167043D008263B7 /* DisplayNode */,
 				D4A786362167043D008263B7 /* Layout */,
@@ -187,17 +225,6 @@
 				D4A786392167043D008263B7 /* Thread */,
 			);
 			path = AsyncKit;
-			sourceTree = "<group>";
-		};
-		D4A786332167043D008263B7 /* Transition */ = {
-			isa = PBXGroup;
-			children = (
-				D4A78646216753A5008263B7 /* SNSASTransaction.h */,
-				D4A78647216753A5008263B7 /* SNSASTransaction.m */,
-				D4C00ADF217089F20077E58A /* SNSASTransactionContext.h */,
-				D4C00AE0217089F20077E58A /* SNSASTransactionContext.m */,
-			);
-			path = Transition;
 			sourceTree = "<group>";
 		};
 		D4A786342167043D008263B7 /* Runloop */ = {
@@ -210,7 +237,6 @@
 		D4A786352167043D008263B7 /* DisplayNode */ = {
 			isa = PBXGroup;
 			children = (
-				D48B959621749D83005F22BA /* SNSASDisplayNode+AsyncDisplay.h */,
 				D48B959521749D83005F22BA /* SNSASDisplayNode+AsyncDisplay.mm */,
 				D48B95842170AA67005F22BA /* SNSASDisplayNodeInternal.h */,
 				D4900B012170A2C700EDF27A /* SNSASDisplayNode.h */,
@@ -267,6 +293,7 @@
 				D48B9593217495B3005F22BA /* SNSASDisplayNode+UIViewBridge.mm */,
 				D4A78662216F718E008263B7 /* SNSASInternalHelpers.h */,
 				D4A78663216F718E008263B7 /* SNSASInternalHelpers.m */,
+				D48B95E42186EABC005F22BA /* SNSASDisplayNode+FrameworkPrivate.h */,
 			);
 			path = Private;
 			sourceTree = "<group>";
@@ -276,6 +303,7 @@
 			children = (
 				D4C00ADD2170844F0077E58A /* SNSASLocking.h */,
 				D4C00ADE2170854C0077E58A /* SNSASBlockTypes.h */,
+				D48B95E52186EDB9005F22BA /* SNSASObjectDescriptionHelpers.h */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -413,13 +441,16 @@
 				D4A7860121649B85008263B7 /* ViewController.m in Sources */,
 				D4A7860C21649B87008263B7 /* main.m in Sources */,
 				D48B9594217495B3005F22BA /* SNSASDisplayNode+UIViewBridge.mm in Sources */,
-				D4C00AE1217089F20077E58A /* SNSASTransactionContext.m in Sources */,
+				D48B95FF218821C2005F22BA /* SNSASTransactionContext.m in Sources */,
+				D48B95FE218821C2005F22BA /* SNSASAysncTransactionContainer.m in Sources */,
+				D48B9601218821C2005F22BA /* SNSASTransactionGroup.m in Sources */,
 				D48B959721749D83005F22BA /* SNSASDisplayNode+AsyncDisplay.mm in Sources */,
 				D4900B052170A2C700EDF27A /* SNSASDisplayNode.mm in Sources */,
+				D48B95EC21870251005F22BA /* SNSASGraphicsContext.m in Sources */,
 				D4A785FE21649B85008263B7 /* AppDelegate.m in Sources */,
 				D48B959F2174A3E8005F22BA /* SNSASAssert.m in Sources */,
 				D4A78664216F718E008263B7 /* SNSASInternalHelpers.m in Sources */,
-				D4A78648216753A5008263B7 /* SNSASTransaction.m in Sources */,
+				D48B9600218821C2005F22BA /* SNSASTransaction.mm in Sources */,
 				D48B959A21749DE3005F22BA /* SNSASDisplayLayer.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
