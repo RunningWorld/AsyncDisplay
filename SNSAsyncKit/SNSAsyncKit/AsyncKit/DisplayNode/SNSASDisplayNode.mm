@@ -10,6 +10,7 @@
 #import "SNSASDisplayNodeInternal.h"
 #import "SNSASDisplayLayer.h"
 #import "SNSASDisplayNode+FrameworkPrivate.h"
+#import "SNSASEqualityHelpers.h"
 
 @implementation SNSASDisplayNode
 
@@ -45,9 +46,15 @@
     if (_cachedSubnodes == nil) {
         _cachedSubnodes = [_subnodes copy];
     } else {
-//        ASDisplayNodeAssert(ASObjectIsEqual(_cachedSubnodes, _subnodes), @"Expected _subnodes and _cachedSubnodes to have the same contents.");
+        ASDisplayNodeAssert(ASObjectIsEqual(_cachedSubnodes, _subnodes), @"Expected _subnodes and _cachedSubnodes to have the same contents.");
     }
     return _cachedSubnodes ?: @[];
+}
+
+- (BOOL)rasterizesSubtree
+{
+    ASDN::MutexLocker l(__instanceLock__);
+    return _flags.rasterizesSubtree;
 }
 
 - (ASHierarchyState)hierarchyState
